@@ -1,9 +1,13 @@
-import {View, Text} from 'react-native';
 import React from 'react';
 import DrawerNavigator from './src/navigation/DrawerNavigator';
+import AppGradient from './src/components/AppGradient';
 
 const App = () => {
-  return <DrawerNavigator />;
+  return (
+    <AppGradient>
+      <DrawerNavigator />
+    </AppGradient>
+  );
 };
 
 export default App;

@@ -16,12 +16,15 @@ const Toptabs = () => {
     <Tab.Navigator
       initialRouteName={SCREENS.SONGS}
       screenOptions={{
-        tabBarLabelStyle: {fontSize: fontSize(16)},
+        tabBarLabelStyle: {fontSize: fontSize(18)},
         tabBarIndicatorStyle: {backgroundColor: colors.white},
         tabBarScrollEnabled: true, // scroll if many tabs
         tabBarActiveTintColor: colors.white,
         tabBarInactiveTintColor: colors.grey,
-        // tabBarStyle: {backgroundColor: colors.black},
+        tabBarStyle: {backgroundColor: 'transparent', elevation: 0},
+        sceneContainerStyle: {
+          backgroundColor: 'transparent', // 🔥 VERY IMPORTANT
+        },
       }}>
       <Tab.Screen name={SCREENS.SONGS} component={Songs} />
       <Tab.Screen name={SCREENS.PLAYLISTS} component={Playlists} />
